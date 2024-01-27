@@ -1,6 +1,110 @@
-body {
-    background-color: rgb(65, 65, 65);
+body{
+    background-color: #282828;
     color: rgb(252, 252, 252);
     font-family: 'Chalet', sans-serif;
 }
 
+.cabecalho{
+    height: 80px;
+    background-color: #0b0b0b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    border-bottom: 1px solid #282828;
+}
+
+.cabecalho .logo{
+    display: flex;
+    gap: 15px;
+}
+
+.cabecalho .menu{
+    display: flex;
+    gap: 30px;
+}
+
+.cabecalho .menu li a{
+    padding: 20px;
+    color: #e8e8e8;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Chalet';
+    align-items: center;
+}
+
+.cabecalho .menu li a:hover{
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.home{
+    background-color: aqua;
+    display: flex;
+    position: relative;
+    min-height: calc(100vh - 80px);
+}
+
+.home::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.7) 15%, transparent 65%);
+}
+
+.home .imagem-fundo{
+    width: 100%;
+    object-fit: cover;
+}
+
+.home .informacoes{
+    /*background-color: brown;*/
+    position: absolute;
+    z-index: 1;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    padding: 80px 80px 80px 170px;
+    max-width: 780px;
+}
+
+.home .informacoes img{
+    max-width: 150px;
+}
+
+.home .informacoes .lista-de-jogos{
+    display: flex;
+    gap: 32px;
+}
+
+.home .informacoes .titulo{
+    font-family: 'ChaletComprime';
+    font-size: 55px;
+}
+
+.home .informacoes .texto{
+    font-family: 'Chalet';
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.btn-comprar{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 0.5px solid #fff;
+    border-radius: 4px;
+    font-family: 'ChaletComprime';
+    font-size: 28px;
+    text-align: center;
+    padding: 20px 40px;
+    text-transform: uppercase;
+    width: 50%;
+    transition: all 0.3s ease-in;
+}
+
+.btn-comprar:hover{
+    background-color: #fff;
+    color: #0b0b0b;
+}
